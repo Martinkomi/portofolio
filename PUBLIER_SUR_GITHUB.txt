@@ -1,0 +1,81 @@
+====================================================
+  COMMENT PUBLIER TON PORTFOLIO SUR GITHUB PAGES
+====================================================
+
+PRÉREQUIS
+---------
+- Avoir un compte GitHub (github.com)
+- Avoir Git installé sur ton ordi (vérifier avec : git --version)
+
+
+ÉTAPE 1 — Créer un dépôt GitHub
+--------------------------------
+1. Va sur github.com et connecte-toi
+2. Clique sur le bouton vert "New" (ou le "+" en haut à droite > New repository)
+3. Nom du dépôt : ton-prenom.github.io
+   (ex: martintete.github.io)
+4. Laisse le dépôt en "Public"
+5. Ne coche rien d'autre, clique sur "Create repository"
+
+
+ÉTAPE 2 — Préparer les fichiers
+---------------------------------
+Assure-toi que ton dossier "Porto Martin" contient :
+  - index.html
+  - script.js
+  - translations.js
+  - ../style.css  ← IMPORTANT : copie style.css dans ce dossier !
+
+Copie le fichier style.css depuis le dossier parent dans "Porto Martin".
+Ensuite, dans index.html, change la ligne :
+  <link rel="stylesheet" href="../style.css">
+par :
+  <link rel="stylesheet" href="style.css">
+
+
+ÉTAPE 3 — Envoyer les fichiers sur GitHub
+------------------------------------------
+Ouvre un terminal dans le dossier "Porto Martin" et tape :
+
+  git init
+  git add .
+  git commit -m "Premier commit - Portfolio Martin"
+  git branch -M main
+  git remote add origin https://github.com/TON-USERNAME/martintete.github.io.git
+  git push -u origin main
+
+(Remplace TON-USERNAME par ton nom d'utilisateur GitHub)
+
+
+ÉTAPE 4 — Activer GitHub Pages
+--------------------------------
+1. Va sur ton dépôt GitHub
+2. Clique sur "Settings" (onglet en haut)
+3. Dans le menu gauche, clique sur "Pages"
+4. Sous "Source", sélectionne "Deploy from a branch"
+5. Choisis la branche : main / (root)
+6. Clique sur "Save"
+
+
+ÉTAPE 5 — Accéder au site
+---------------------------
+Attends 1-2 minutes, puis ton site sera en ligne à :
+  https://martintete.github.io
+
+(ou le nom que tu as choisi à l'étape 1)
+
+
+METTRE À JOUR LE SITE PLUS TARD
+---------------------------------
+Quand tu modifies des fichiers, refais juste :
+
+  git add .
+  git commit -m "Mise à jour"
+  git push
+
+Le site se mettra à jour automatiquement en quelques minutes.
+
+
+====================================================
+  En cas de problème : github.com/contact
+====================================================
